@@ -10,6 +10,29 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\gameapplication\GameAppliacation.cpp" />
+    <ClCompile Include="src\object\enemy\Enemy.cpp" />
+    <ClCompile Include="src\object\player\Player.cpp" />
+    <ClCompile Include="src\object\player\PlayerMove.cpp" />
+    <ClCompile Include="src\resource\Resource.cpp" />
+    <ClCompile Include="src\scene\SceneManager.cpp" />
+    <ClCompile Include="src\scene\Stage.cpp" />
+    <ClCompile Include="src\utility\Vec2f.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gameapplication\GameAppliacation.h" />
+    <ClInclude Include="src\object\enemy\Enemy.h" />
+    <ClInclude Include="src\object\Object.h" />
+    <ClInclude Include="src\object\player\Player.h" />
+    <ClInclude Include="src\object\player\PlayerMove.h" />
+    <ClInclude Include="src\resource\Resource.h" />
+    <ClInclude Include="src\scene\SceneManager.h" />
+    <ClInclude Include="src\scene\Stage.h" />
+    <ClInclude Include="src\Uncopyable.h" />
+    <ClInclude Include="src\utility\Vec2f.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2F79C52B-1A12-456C-B8F1-A89E36D5C247}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -81,9 +104,6 @@
       <AdditionalLibraryDirectories>./DxLib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="test.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

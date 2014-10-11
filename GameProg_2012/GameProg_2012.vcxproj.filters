@@ -13,10 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\gameapplicationn">
+      <UniqueIdentifier>{b5710477-25e9-410c-8b17-6881a3372e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\object">
+      <UniqueIdentifier>{82098550-f1d4-4a7c-b9e1-86c00daf7561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\object\player">
+      <UniqueIdentifier>{bb885f87-0ad4-4693-9803-83be01371ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\object\enemy">
+      <UniqueIdentifier>{8799945b-d6df-469f-a1c4-3ae140d21cff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\scene">
+      <UniqueIdentifier>{5367b404-7014-473b-9325-581748b47082}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\utility">
+      <UniqueIdentifier>{0914c495-e51e-43e7-b66a-cb4e9a5e42ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="src\gameapplication\GameAppliacation.cpp">
+      <Filter>ソース ファイル\gameapplicationn</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\player\Player.cpp">
+      <Filter>ソース ファイル\object\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\SceneManager.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scene\Stage.cpp">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\enemy\Enemy.cpp">
+      <Filter>ソース ファイル\object\enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="src\resource\Resource.cpp">
+      <Filter>リソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utility\Vec2f.cpp">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\object\player\PlayerMove.cpp">
+      <Filter>ソース ファイル\object\player</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\gameapplication\GameAppliacation.h">
+      <Filter>ソース ファイル\gameapplicationn</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\Object.h">
+      <Filter>ソース ファイル\object</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\player\Player.h">
+      <Filter>ソース ファイル\object\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\SceneManager.h">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scene\Stage.h">
+      <Filter>ソース ファイル\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\enemy\Enemy.h">
+      <Filter>ソース ファイル\object\enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Uncopyable.h">
+      <Filter>ソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\Resource.h">
+      <Filter>リソース ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="src\utility\Vec2f.h">
+      <Filter>ソース ファイル\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\object\player\PlayerMove.h">
+      <Filter>ソース ファイル\object\player</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
