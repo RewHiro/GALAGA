@@ -22,6 +22,9 @@ private:
 	//@¶‚«‚Ä‚é‚Æ‚«‚Ì•`‰æˆ—
 	void LiveDraw();
 
+	//@ˆÚ“®ˆ—
+	void MoveUpdate();
+
 	std::unique_ptr<CPlayerMove>m_move;
 };
 

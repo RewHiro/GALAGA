@@ -1,11 +1,17 @@
 #pragma once
-class CPlayerMove
-{
+#include <memory>
+
+class CPlayer;
+
+class CPlayerMove{
 public:
 	CPlayerMove();
 
 	//　更新
 	void Update();
+
+	//　スピードの取得
+	float GetSpeed(){ return m_velocity; }
 
 private:
 
@@ -19,5 +25,6 @@ private:
 	void Stop();
 
 	float m_velocity;				//　速度
+	const float SPEED_VAL;		//　速度の値
 };
 
