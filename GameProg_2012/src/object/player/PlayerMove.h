@@ -24,7 +24,12 @@ private:
 	//　動かないときの処理
 	void Stop();
 
+	//　動ける限界
+	void Limit(float x);
+
 	float m_velocity;				//　速度
+
 	const float SPEED_VAL;		//　速度の値
+	const float LIMIT_LINE;		//　限界の座標
 };
 
