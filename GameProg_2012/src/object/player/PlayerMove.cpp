@@ -4,7 +4,8 @@
 
 CPlayerMove::CPlayerMove():
 m_velocity(0),
-SPEED_VAL(5)
+SPEED_VAL(5),
+LIMIT_LINE(0)
 {
 }
 
@@ -32,3 +33,8 @@ void CPlayerMove::Stop(){
 	if (CheckHitKeyAll())return;
 	m_velocity = 0;
 }
+
+////@“®‚¯‚éŒÀŠE
+//void CPlayerMove::Limit(float x){
+//	if(x > limit_pos)
+//}
