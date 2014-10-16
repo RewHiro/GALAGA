@@ -7,13 +7,16 @@
 class Vec2f{
 public:
 	Vec2f() = default;
-	Vec2f(const float pos_x, const float pos_y);
+	Vec2f(const float pos_x, const float pos_y) :
+		m_x(pos_x),
+		m_y(pos_y){}
 
 	Vec2f &operator+=(const Vec2f &vec){
 		m_x += vec.m_x;
 		m_y += vec.m_y;
 		return *this;
 	}
+
 
 	//@À•W‚ğæ“¾
 	float x(){ return m_x; }
