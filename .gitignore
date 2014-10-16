@@ -1,0 +1,10 @@
+.lib
+.obj
+.exe
+.tlog
+.log
+.sdf
+.sln
+.suo
+.vcxproj
+.filters
