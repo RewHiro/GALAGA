@@ -7,3 +7,8 @@ CEnemy::CEnemy(){
 
 CEnemy::~CEnemy(){
 }
+
+static void LoadGraphics(){
+	
+
+};

@@ -17,7 +17,7 @@ public:
 	void Draw();
 
 	//@¶¬
-	void Create(Vec2f &);
+	void Create(const Vec2f &);
 private:
 	//@ˆÚ“®ˆ—
 	void Move();

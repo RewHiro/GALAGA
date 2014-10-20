@@ -50,6 +50,13 @@ double Random::Gaussian(const double expectation, const double error){
 
 int Random::Gaussian(const int expectation, const int error){
 	std::normal_distribution<double>random(expectation, error);
-	int result = random(engine);
+	int result = static_cast<int>(random(engine));
 	return result;
+}
+
+//@‘I‘ğ®
+int Random::Select(const std::vector<int> &select){
+	std::uniform_int_distribution<int>random(0,select.size()-1);
+	int result = random(engine);
+	return select[result];
 }

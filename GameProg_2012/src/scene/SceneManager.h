@@ -46,7 +46,7 @@ public:
 	void Draw();
 
 	static const int WIDTH = 600;		//　画面の横サイズ
-	static const int HEIGHT = 800;		//　画面の縦サイズ
+	static const int HEIGHT = 780;		//　画面の縦サイズ
 
 private:
 	CSceneManager();
@@ -63,7 +63,7 @@ private:
 	void InitializeTheState();
 
 	//　遷移したいシーンを渡す関数
-	static void SelectScene(Scene next_scene);
+	static void SelectScene(const Scene next_scene);
 
 	enum class State{
 		INIT,

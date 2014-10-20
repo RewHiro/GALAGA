@@ -4,11 +4,12 @@
 #include "../../scene/SceneManager.h"
 #include "PlayerMove.h"
 #include "../bullet/Bullet.h"
+#include "../../utility/Key.h"
 #include "../../../DxLib/DxLib.h"
 //#define Debug
 
 CPlayer::CPlayer():
-m_move(std::make_unique<CPlayerMove>())
+m_move(std::make_unique<CPlayerMove>(m_pos))
 {
 	m_size = Vec2f(64, 64);
 	m_pos = Vec2f(CSceneManager::WIDTH / 2 - m_size.x() / 2,
@@ -20,6 +21,7 @@ m_move(std::make_unique<CPlayerMove>())
 
 //　更新
 void CPlayer::Update(){
+	gpUpdateKey();
 	MoveUpdate();
 	Shot();
 	BulletUpdate();
@@ -27,8 +29,8 @@ void CPlayer::Update(){
 
 //　描画
 void CPlayer::Draw(){
-	LiveDraw();
 	BulletDraw();
+	LiveDraw();
 }
 
 //　生きてるときの描画処理
@@ -48,7 +50,6 @@ void CPlayer::LiveDraw(){
 void CPlayer::MoveUpdate(){
 	if (m_state != State::LIVE)return;
 	m_move->Update();
-	m_pos.m_x += m_move->GetSpeed();
 }
 
 //　弾の更新
@@ -69,7 +70,7 @@ void CPlayer::BulletDraw(){
 void CPlayer::CreateBullet(){
 	for (auto &bullet : m_bullet){
 		if (bullet->GetState() == State::NONE){
-			bullet->Create(m_pos);
+			bullet->Create(Vec2f(m_pos.x() + m_size.x() / 2 - 6, m_pos.y() + m_size.y() / 2));
 			break;
 		}
 	}
@@ -77,6 +78,6 @@ void CPlayer::CreateBullet(){
 
 //　発射
 void CPlayer::Shot(){
-	if (!CheckHitKey(KEY_INPUT_LCONTROL))return;
+	if (GetKey(KEY_INPUT_LCONTROL) == 0 || GetKey(KEY_INPUT_LCONTROL) > 1)return;
 	CreateBullet();
 }

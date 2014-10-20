@@ -2,14 +2,15 @@
 #include "Stage.h"
 #include "DxLib.h"
 
+
 CSceneManager::Scene CSceneManager::m_now_scene = CSceneManager::Scene::STAGE;
 CSceneManager::CSceneManager():
 m_state(State::INIT)
 {
-	ChangeWindowMode(true);
 	SetGraphMode(CSceneManager::WIDTH, CSceneManager::HEIGHT, 32);
-	SetDrawScreen(DX_SCREEN_BACK);
+	ChangeWindowMode(true);
 	DxLib_Init();   // DXライブラリ初期化処理
+	SetDrawScreen(DX_SCREEN_BACK);
 }
 
 CSceneManager::~CSceneManager(){
@@ -26,12 +27,10 @@ void CSceneManager::Update(){
 
 //　描画
 void CSceneManager::Draw(){
-	// 画面を初期化
 	ClearDrawScreen();
 	if (m_state == State::UPDATE){
 		m_scene->Draw();
 	}
-	// 裏画面の内容を表画面に映す
 	ScreenFlip();
 }
 
@@ -53,7 +52,7 @@ void CSceneManager::Transition(){
 }
 
 //　遷移したいシーンを渡す関数
-void CSceneManager::SelectScene(Scene next_scene){
+void CSceneManager::SelectScene(const Scene next_scene){
 	m_now_scene = next_scene;
 }
 

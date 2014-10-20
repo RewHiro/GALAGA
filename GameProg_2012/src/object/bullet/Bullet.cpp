@@ -3,17 +3,22 @@
 #include "../../../DxLib/DxLib.h"
 
 CBullet::CBullet():
-SPEED_VAL(10)
+SPEED_VAL(15)
 {
 	m_size = Vec2f(16,16);
 	m_state = State::NONE;
 }
 
+//　更新
 void CBullet::Update(){
 	if (m_state != State::LIVE)return;
-	m_pos.m_y -= SPEED_VAL;
+	m_pos -= Vec2f(0,SPEED_VAL);
+	if (m_pos.y() <= 0){
+		m_state = State::NONE;
+	}
 }
 
+//　描画
 void CBullet::Draw(){
 	if (m_state != State::LIVE)return;
 	DrawExtendGraphF(m_pos.x(), m_pos.y(),
@@ -21,7 +26,8 @@ void CBullet::Draw(){
 		CResource::player_bullet, true);
 }
 
-void CBullet::Create(Vec2f &pos){
+//　生成
+void CBullet::Create(const Vec2f &pos){
 	if (m_state != State::NONE)return;
 	m_pos = pos;
 	m_state = State::LIVE;

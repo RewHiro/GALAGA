@@ -1,5 +1,6 @@
 #pragma once
 #include <random>
+#include <vector>
 
 //=====================================
 //ランダムクラス
@@ -33,6 +34,10 @@ public:
 	static double Gaussian(const double expectation, const double error);
 
 	static int Gaussian(const int expectation, const int error);
+
+	//　選択式
+	static int Select(const std::vector<int> &select);
+
 
 private:
 	static std::mt19937 engine;
